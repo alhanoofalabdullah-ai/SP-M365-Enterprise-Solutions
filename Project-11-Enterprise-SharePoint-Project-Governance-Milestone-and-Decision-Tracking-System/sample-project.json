@@ -1,0 +1,13 @@
+{
+  "projectId": "PRJ-2026-011",
+  "projectName": "Enterprise Collaboration Modernization",
+  "projectManager": "project.manager@contoso.com",
+  "sponsor": "executive.sponsor@contoso.com",
+  "department": "Digital Transformation",
+  "startDate": "2026-01-15",
+  "targetEndDate": "2026-12-15",
+  "currentMilestone": "Pilot Deployment",
+  "healthStatus": "Amber",
+  "completionPercent": 62,
+  "nextReviewDate": "2026-08-01"
+}
