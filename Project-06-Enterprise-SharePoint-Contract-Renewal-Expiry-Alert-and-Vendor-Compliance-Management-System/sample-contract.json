@@ -1,0 +1,11 @@
+{
+  "contractNumber": "CTR-2026-001",
+  "vendorName": "Contoso Technology Services",
+  "contractOwner": "procurement.manager@contoso.com",
+  "department": "Information Technology",
+  "startDate": "2025-09-01",
+  "expiryDate": "2026-09-01",
+  "contractValue": 450000,
+  "renewalStatus": "Active",
+  "complianceStatus": "Compliant"
+}
