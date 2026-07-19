@@ -1,0 +1,3 @@
+./setup.ps1 `
+  -SiteUrl "https://contoso.sharepoint.com/sites/DocumentGovernance" `
+  -ClientId "YOUR-ENTRA-APPLICATION-CLIENT-ID"
