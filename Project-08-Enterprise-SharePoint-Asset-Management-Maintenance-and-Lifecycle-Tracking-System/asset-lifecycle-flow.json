@@ -1,0 +1,20 @@
+{
+  "flowName":"Enterprise Asset Lifecycle",
+  "trigger":"Daily Schedule",
+  "actions":[
+    "Read Enterprise Assets",
+    "Check Warranty Expiry",
+    "Check Maintenance Date",
+    "Send Maintenance Reminder",
+    "Notify Asset Owner",
+    "Update Asset Status",
+    "Create Maintenance Log"
+  ],
+  "statuses":[
+    "Active",
+    "Maintenance Due",
+    "Under Maintenance",
+    "Retired",
+    "Disposed"
+  ]
+}
