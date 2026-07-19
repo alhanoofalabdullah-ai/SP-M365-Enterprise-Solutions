@@ -1,8 +1,4 @@
 ---
-
-# README.md
-
-```markdown
 # Enterprise SharePoint Document Approval, Governance and Audit Management System
 
 Enterprise Microsoft 365 solution for managing document submissions,
