@@ -1,0 +1,68 @@
+{
+  "flowName": "Enterprise Document Approval Workflow",
+  "trigger": {
+    "connector": "SharePoint",
+    "action": "When a file is created or modified (properties only)",
+    "library": "Enterprise Documents",
+    "triggerCondition": "@equals(triggerBody()?['ApprovalStatus']?['Value'],'Draft')"
+  },
+  "actions": [
+    {
+      "order": 1,
+      "name": "Set Pending Approval",
+      "connector": "SharePoint",
+      "action": "Update file properties",
+      "values": {
+        "ApprovalStatus": "Pending Approval"
+      }
+    },
+    {
+      "order": 2,
+      "name": "Create Approval",
+      "connector": "Approvals",
+      "action": "Start and wait for an approval",
+      "approvalType": "Approve/Reject - First to respond",
+      "assignedTo": "@{triggerBody()?['Approver']?['Email']}",
+      "title": "Document approval: @{triggerBody()?['{FilenameWithExtension}']}",
+      "details": "Review the submitted enterprise document."
+    },
+    {
+      "order": 3,
+      "name": "Evaluate Outcome",
+      "type": "Condition",
+      "expression": "@equals(outputs('Create_Approval')?['body/outcome'],'Approve')"
+    },
+    {
+      "order": 4,
+      "branch": "Approved",
+      "actions": [
+        "Update Approval Status to Approved",
+        "Store Approval Date",
+        "Store Approver Comments",
+        "Create Approval Log record",
+        "Notify Document Owner"
+      ]
+    },
+    {
+      "order": 5,
+      "branch": "Rejected",
+      "actions": [
+        "Update Approval Status to Rejected",
+        "Store Rejection Comments",
+        "Create Approval Log record",
+        "Notify Document Owner"
+      ]
+    }
+  ],
+  "errorHandling": {
+    "scope": "Failure Handler",
+    "runAfter": [
+      "hasFailed",
+      "hasTimedOut"
+    ],
+    "actions": [
+      "Create Failed Audit Log",
+      "Notify Solution Administrator"
+    ]
+  }
+}
