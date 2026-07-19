@@ -1,0 +1,19 @@
+{
+  "flowName":"Enterprise Risk Monitoring",
+  "trigger":"Daily Schedule",
+  "actions":[
+    "Read Risk Register",
+    "Calculate Risk Score",
+    "Identify High Risks",
+    "Notify Risk Owner",
+    "Escalate Critical Risks",
+    "Update Review Status",
+    "Create Risk Log"
+  ],
+  "statuses":[
+    "Open",
+    "Monitoring",
+    "Mitigated",
+    "Closed"
+  ]
+}
