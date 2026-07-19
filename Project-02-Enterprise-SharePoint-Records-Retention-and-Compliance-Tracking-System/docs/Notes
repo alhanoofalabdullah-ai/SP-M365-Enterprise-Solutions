@@ -1,0 +1,69 @@
+## Deploy SharePoint Components
+
+./setup.ps1 `
+  -SiteUrl "https://contoso.sharepoint.com/sites/RecordsManagement" `
+  -ClientId "YOUR-ENTRA-APPLICATION-CLIENT-ID"
+
+---
+
+## Configure the Power Automate Flow
+
+1. Open Power Automate.
+2. Create a scheduled cloud flow.
+3. Configure it to run every day at 8:00 AM.
+4. Add Get files (properties only).
+5. Select the Corporate Records library.
+6. Filter records with the status Active.
+7. Filter records whose review date is today or earlier.
+8. Update matching records to Review Due.
+9. Add a custom-response approval.
+10. Add these responses:
+
+* Extend Retention
+* Approve Disposal
+* Apply Legal Hold
+
+11. Use a Switch action to process each response.
+12. Update the SharePoint record.
+13. Create an item in Retention Review Log.
+14. Notify the record owner.
+15. Add a failure-handling scope.
+16. Test all decision paths.
+
+---
+
+## Security Model
+
+* Records Administrators: Full Control
+* Compliance Team: Edit records and review decisions
+* Legal Team: Apply and review legal holds
+* Record Owners: Read and contribute to assigned records
+* Auditors: Read-only access
+* General Employees: No direct access to sensitive records
+
+---
+
+## Test Scenario
+
+1. Upload a sample record.
+2. Complete all retention metadata.
+3. Set the review date to today.
+4. Run the scheduled flow manually.
+5. Confirm the record changes to Review Due.
+6. Select Extend Retention.
+7. Confirm that a new review date is created.
+8. Confirm that the decision is written to the review log.
+9. Confirm that the record owner receives a notification.
+
+---
+
+## Production Recommendations
+
+* Use dedicated Microsoft 365 security groups.
+* Apply sensitivity labels.
+* Apply Microsoft Purview retention labels.
+* Restrict deletion permissions.
+* Require compliance approval before disposal.
+* Export Power Automate solutions for backup.
+* Review failed flows weekly.
+* Review legal-hold records regularly.
