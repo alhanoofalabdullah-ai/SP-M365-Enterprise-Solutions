@@ -1,0 +1,24 @@
+{
+  "flowName": "Enterprise Employee Onboarding Workflow",
+  "trigger": {
+    "connector": "SharePoint",
+    "action": "When an item is created",
+    "list": "Employee Onboarding"
+  },
+  "actions": [
+    "Set Provisioning Status to In Progress",
+    "Validate employee email and manager",
+    "Create employee folder in Employee Documents",
+    "Grant employee folder permissions",
+    "Add employee to department Microsoft 365 group",
+    "Create onboarding tasks in Microsoft Planner",
+    "Send welcome email through Outlook",
+    "Post welcome message in Microsoft Teams",
+    "Set Provisioning Status to Completed"
+  ],
+  "failureHandling": [
+    "Set Provisioning Status to Failed",
+    "Store failure message",
+    "Notify HR and IT administrators"
+  ]
+}
