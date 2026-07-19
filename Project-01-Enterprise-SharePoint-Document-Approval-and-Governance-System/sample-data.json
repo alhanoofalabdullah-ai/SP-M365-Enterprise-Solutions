@@ -1,0 +1,21 @@
+{
+  "document": {
+    "fileName": "Vendor-Contract-2026.docx",
+    "department": "Procurement",
+    "documentOwner": "employee@contoso.com",
+    "approver": "manager@contoso.com",
+    "approvalStatus": "Draft"
+  },
+  "expectedApprovalResult": {
+    "approvalStatus": "Approved",
+    "approvalDate": "2026-07-19T15:30:00Z",
+    "approvalComments": "Approved according to procurement policy."
+  },
+  "expectedAuditRecord": {
+    "title": "Vendor Contract Approved",
+    "documentName": "Vendor-Contract-2026.docx",
+    "approvalAction": "Approved",
+    "actionBy": "manager@contoso.com",
+    "comments": "Approved according to procurement policy."
+  }
+}
