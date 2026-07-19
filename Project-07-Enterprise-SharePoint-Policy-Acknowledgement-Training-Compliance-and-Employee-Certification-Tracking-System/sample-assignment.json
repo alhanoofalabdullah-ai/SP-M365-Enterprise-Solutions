@@ -1,0 +1,9 @@
+{
+  "policyNumber": "POL-INFOSEC-2026-001",
+  "assignedEmployee": "employee@contoso.com",
+  "assignedDepartment": "Information Technology",
+  "dueDate": "2026-09-15",
+  "acknowledgementStatus": "Pending",
+  "trainingStatus": "Not Started",
+  "certificateReference": null
+}
