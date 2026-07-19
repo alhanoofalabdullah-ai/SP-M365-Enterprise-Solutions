@@ -1,0 +1,11 @@
+{
+  "riskId":"RSK-2026-001",
+  "riskTitle":"Critical Database Failure",
+  "category":"Technology",
+  "owner":"it.manager@contoso.com",
+  "probability":"High",
+  "impact":"Critical",
+  "riskScore":"25",
+  "reviewDate":"2026-09-15",
+  "status":"Open"
+}
