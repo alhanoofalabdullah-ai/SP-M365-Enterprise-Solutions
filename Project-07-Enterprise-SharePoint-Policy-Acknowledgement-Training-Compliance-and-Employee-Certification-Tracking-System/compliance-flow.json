@@ -1,0 +1,27 @@
+{
+  "flowName": "Enterprise Policy Acknowledgement and Training Compliance Workflow",
+  "trigger": {
+    "connector": "SharePoint",
+    "action": "When an item is created",
+    "list": "Policy Compliance Assignments"
+  },
+  "actions": [
+    "Set acknowledgement status to Pending",
+    "Send policy link and acknowledgement request",
+    "Create employee training task",
+    "Wait until due date",
+    "Check acknowledgement and training status",
+    "Send first reminder three days before due date",
+    "Escalate overdue assignment to manager",
+    "Update compliance status",
+    "Store acknowledgement date and certificate reference"
+  ],
+  "statuses": {
+    "acknowledgement": ["Pending", "Acknowledged", "Overdue", "Exempt"],
+    "training": ["Not Started", "In Progress", "Completed", "Overdue"]
+  },
+  "failureHandling": [
+    "Write failure details to Compliance Notes",
+    "Notify compliance administrator"
+  ]
+}
