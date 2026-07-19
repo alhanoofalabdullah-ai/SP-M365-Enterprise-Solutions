@@ -1,0 +1,10 @@
+{
+  "requestNumber": "SR-2026-0001",
+  "requester": "employee@contoso.com",
+  "department": "Finance",
+  "requestCategory": "Access Request",
+  "priority": "High",
+  "assignedTo": "support@contoso.com",
+  "requestStatus": "Open",
+  "description": "Access is required to the monthly reporting workspace."
+}
