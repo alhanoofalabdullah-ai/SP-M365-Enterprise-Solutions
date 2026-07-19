@@ -1,0 +1,21 @@
+# PowerShell
+*.log
+*.tmp
+
+# Microsoft 365 exports
+*.zip
+*.cab
+
+# Local configuration
+.env
+config.local.json
+secrets.json
+
+# macOS
+.DS_Store
+
+# Visual Studio Code
+.vscode/
+
+# Temporary screenshots
+Screenshots/temp/
