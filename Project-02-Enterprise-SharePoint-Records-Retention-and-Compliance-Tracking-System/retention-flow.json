@@ -1,0 +1,87 @@
+{
+  "flowName": "Enterprise Records Retention Review Workflow",
+  "schedule": {
+    "type": "Recurrence",
+    "frequency": "Day",
+    "interval": 1,
+    "timeZone": "Arab Standard Time",
+    "startTime": "08:00"
+  },
+  "source": {
+    "connector": "SharePoint",
+    "library": "Corporate Records",
+    "action": "Get files properties only",
+    "filterQuery": "RetentionStatus eq 'Active'"
+  },
+  "actions": [
+    {
+      "order": 1,
+      "name": "Identify Due Records",
+      "type": "Filter array",
+      "condition": "@lessOrEquals(item()?['RetentionReviewDate'],utcNow())"
+    },
+    {
+      "order": 2,
+      "name": "Process Each Record",
+      "type": "Apply to each"
+    },
+    {
+      "order": 3,
+      "name": "Set Review Due",
+      "connector": "SharePoint",
+      "action": "Update file properties",
+      "values": {
+        "RetentionStatus": "Review Due"
+      }
+    },
+    {
+      "order": 4,
+      "name": "Request Compliance Decision",
+      "connector": "Approvals",
+      "action": "Start and wait for an approval",
+      "approvalType": "Custom Responses - Wait for one response",
+      "responses": [
+        "Extend Retention",
+        "Approve Disposal",
+        "Apply Legal Hold"
+      ],
+      "assignedTo": "compliance@contoso.com"
+    },
+    {
+      "order": 5,
+      "name": "Evaluate Decision",
+      "type": "Switch",
+      "expression": "@outputs('Request_Compliance_Decision')?['body/outcome']"
+    }
+  ],
+  "decisionBranches": {
+    "Extend Retention": [
+      "Set Retention Status to Extended",
+      "Calculate New Review Date",
+      "Create Retention Review Log",
+      "Notify Record Owner"
+    ],
+    "Approve Disposal": [
+      "Set Retention Status to Eligible for Disposal",
+      "Create Retention Review Log",
+      "Notify Records Administrator"
+    ],
+    "Apply Legal Hold": [
+      "Set Retention Status to Legal Hold",
+      "Store Legal Hold Reference",
+      "Create Retention Review Log",
+      "Notify Legal and Record Owner"
+    ]
+  },
+  "errorHandling": {
+    "scope": "Compliance Failure Handler",
+    "runAfter": [
+      "hasFailed",
+      "hasTimedOut"
+    ],
+    "actions": [
+      "Create Review Failed Log",
+      "Notify Compliance Administrator"
+    ]
+  }
+}
