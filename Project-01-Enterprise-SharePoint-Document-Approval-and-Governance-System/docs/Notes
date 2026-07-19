@@ -1,0 +1,53 @@
+## Create the Power Automate Flow
+
+1. Open Power Automate.
+2. Create an Automated Cloud Flow.
+3. Select the SharePoint trigger:
+    When a file is created or modified (properties only).
+4. Select the target SharePoint site.
+5. Select Enterprise Documents.
+6. Add the trigger condition documented in flow-design.json.
+7. Update the file status to Pending Approval.
+8. Add Start and wait for an approval.
+9. Assign the approval to the Approver Email field.
+10. Add an outcome condition.
+11. Update the document properties.
+12. Create an item in Approval Log.
+13. Send an Outlook notification.
+14. Add a failure-handling scope.
+15. Save and test the flow.
+
+---
+
+## Test Scenario
+
+1. Upload Vendor-Contract-2026.docx.
+2. Complete Department, Document Owner and Approver.
+3. Set Approval Status to Draft.
+4. Confirm the flow starts.
+5. Approve the request.
+6. Confirm the document becomes Approved.
+7. Confirm an Approval Log record is created.
+8. Confirm the document owner receives an email.
+
+---
+
+## Security
+
+* Employees: upload and view their documents.
+* Approvers: review and approve assigned documents.
+* Site Owners: manage configuration.
+* Auditors: read-only access to the Approval Log.
+* Flow service account: edit access to both lists.
+
+---
+
+## Production Recommendations
+
+* Use dedicated Microsoft 365 security groups.
+* Use a dedicated service account for the flow.
+* Apply retention labels where required.
+* Enable version history.
+* Restrict direct editing of approval fields.
+* Review failed flow runs regularly.
+* Export the Power Automate solution for backup.
