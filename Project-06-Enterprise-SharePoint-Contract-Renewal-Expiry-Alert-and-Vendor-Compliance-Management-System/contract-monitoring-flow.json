@@ -1,0 +1,35 @@
+{
+  "flowName": "Enterprise Contract Renewal and Compliance Workflow",
+  "trigger": {
+    "type": "Recurrence",
+    "frequency": "Day",
+    "interval": 1,
+    "time": "08:00"
+  },
+  "source": {
+    "connector": "SharePoint",
+    "library": "Enterprise Contracts"
+  },
+  "actions": [
+    "Get active contracts",
+    "Calculate days remaining until expiry",
+    "Send 90-day renewal reminder",
+    "Send 60-day escalation reminder",
+    "Send 30-day urgent reminder",
+    "Set expired contracts to Expired",
+    "Create contract compliance log",
+    "Notify contract owner and procurement manager"
+  ],
+  "renewalStatuses": [
+    "Active",
+    "Renewal Review",
+    "Renewal Approved",
+    "Renewal Rejected",
+    "Expired",
+    "Terminated"
+  ],
+  "failureHandling": [
+    "Create failed compliance log",
+    "Notify contract administrator"
+  ]
+}
