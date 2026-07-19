@@ -1,0 +1,28 @@
+{
+  "flowName": "Enterprise Project Governance Review Workflow",
+  "trigger": {
+    "type": "Recurrence",
+    "frequency": "Week",
+    "interval": 1
+  },
+  "actions": [
+    "Read active enterprise projects",
+    "Identify projects due for governance review",
+    "Check milestone and completion status",
+    "Notify project manager",
+    "Escalate red health status to sponsor",
+    "Create governance decision record",
+    "Update next review date"
+  ],
+  "healthStatuses": [
+    "Green",
+    "Amber",
+    "Red",
+    "On Hold",
+    "Completed"
+  ],
+  "failureHandling": [
+    "Write failure details to decision log",
+    "Notify PMO administrator"
+  ]
+}
