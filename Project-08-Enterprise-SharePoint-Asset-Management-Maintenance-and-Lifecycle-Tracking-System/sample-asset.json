@@ -1,0 +1,12 @@
+{
+  "assetId":"IT-2026-001",
+  "assetName":"Dell Latitude 7450",
+  "category":"Laptop",
+  "department":"IT",
+  "owner":"employee@contoso.com",
+  "purchaseDate":"2025-02-01",
+  "warrantyExpiry":"2028-02-01",
+  "maintenanceDate":"2026-10-01",
+  "status":"Active",
+  "location":"Riyadh HQ"
+}
