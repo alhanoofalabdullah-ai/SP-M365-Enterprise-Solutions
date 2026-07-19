@@ -1,0 +1,32 @@
+{
+  "records": [
+    {
+      "fileName": "Employee-Contract-2020.pdf",
+      "recordCategory": "Human Resources",
+      "recordOwner": "hr.manager@contoso.com",
+      "retentionPeriodYears": 6,
+      "retentionStartDate": "2020-01-15",
+      "retentionReviewDate": "2026-01-15",
+      "retentionStatus": "Review Due"
+    },
+    {
+      "fileName": "Vendor-Agreement-2021.pdf",
+      "recordCategory": "Procurement",
+      "recordOwner": "procurement.manager@contoso.com",
+      "retentionPeriodYears": 5,
+      "retentionStartDate": "2021-03-10",
+      "retentionReviewDate": "2026-03-10",
+      "retentionStatus": "Active"
+    },
+    {
+      "fileName": "Legal-Case-Archive.pdf",
+      "recordCategory": "Legal",
+      "recordOwner": "legal.manager@contoso.com",
+      "retentionPeriodYears": 10,
+      "retentionStartDate": "2018-06-01",
+      "retentionReviewDate": "2028-06-01",
+      "retentionStatus": "Legal Hold",
+      "legalHoldReference": "LH-2026-014"
+    }
+  ]
+}
