@@ -1,0 +1,20 @@
+{
+  "flowName":"Enterprise Visitor Management",
+  "trigger":"When a visitor is registered",
+  "actions":[
+    "Validate visitor information",
+    "Generate visitor ID",
+    "Notify host",
+    "Generate visitor badge",
+    "Record check-in",
+    "Send checkout reminder",
+    "Record check-out",
+    "Archive visitor record"
+  ],
+  "statuses":[
+    "Registered",
+    "Checked In",
+    "Checked Out",
+    "Cancelled"
+  ]
+}
