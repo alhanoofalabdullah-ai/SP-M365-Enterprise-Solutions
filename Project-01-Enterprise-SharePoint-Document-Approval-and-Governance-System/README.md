@@ -1,6 +1,6 @@
 ---
 
-# 6. `README.md`
+# README.md`
 
 ```markdown
 # Enterprise SharePoint Document Approval, Governance and Audit Management System
