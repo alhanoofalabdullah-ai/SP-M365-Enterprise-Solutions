@@ -1,0 +1,10 @@
+{
+  "employeeId": "EMP-2026-001",
+  "employeeName": "Sara Ahmed",
+  "employeeEmail": "sara.ahmed@contoso.com",
+  "department": "Information Technology",
+  "manager": "it.manager@contoso.com",
+  "jobTitle": "Systems Analyst",
+  "startDate": "2026-08-01",
+  "provisioningStatus": "Pending"
+}
