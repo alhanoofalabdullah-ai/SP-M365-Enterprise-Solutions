@@ -1,0 +1,29 @@
+{
+  "flowName": "Enterprise Meeting Action and Decision Workflow",
+  "trigger": {
+    "connector": "SharePoint",
+    "action": "When an item is created",
+    "list": "Enterprise Meetings"
+  },
+  "actions": [
+    "Generate meeting number",
+    "Send meeting summary to attendees",
+    "Create action items from meeting outcomes",
+    "Assign action owners and due dates",
+    "Create decision register entries",
+    "Send reminders before action due dates",
+    "Escalate overdue actions to meeting owner",
+    "Close meeting after all actions are completed"
+  ],
+  "statuses": [
+    "Scheduled",
+    "Completed",
+    "Actions Open",
+    "Closed",
+    "Cancelled"
+  ],
+  "failureHandling": [
+    "Set meeting status to Processing Failed",
+    "Notify meeting administrator"
+  ]
+}
