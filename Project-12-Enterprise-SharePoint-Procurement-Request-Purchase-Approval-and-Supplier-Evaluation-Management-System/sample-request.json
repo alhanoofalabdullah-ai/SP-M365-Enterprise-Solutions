@@ -1,0 +1,11 @@
+{
+  "requestNumber": "PR-2026-0012",
+  "requester": "employee@contoso.com",
+  "department": "Information Technology",
+  "purchaseCategory": "Software",
+  "estimatedValue": 85000,
+  "requiredDate": "2026-09-30",
+  "businessJustification": "Annual enterprise security platform renewal.",
+  "approver": "procurement.manager@contoso.com",
+  "approvalStatus": "Pending"
+}
