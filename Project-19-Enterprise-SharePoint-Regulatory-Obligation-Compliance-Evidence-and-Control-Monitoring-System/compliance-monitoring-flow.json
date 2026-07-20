@@ -1,0 +1,29 @@
+{
+  "flowName": "Enterprise Regulatory Compliance Monitoring Workflow",
+  "trigger": {
+    "type": "Recurrence",
+    "frequency": "Week",
+    "interval": 1
+  },
+  "actions": [
+    "Read regulatory obligations due for review",
+    "Notify the control owner",
+    "Request updated compliance evidence",
+    "Evaluate evidence status",
+    "Set obligation as Compliant or Action Required",
+    "Escalate overdue high-risk obligations",
+    "Create remediation follow-up",
+    "Update the next review date"
+  ],
+  "complianceStatuses": [
+    "Compliant",
+    "Review Due",
+    "Evidence Pending",
+    "Action Required",
+    "Non-Compliant"
+  ],
+  "failureHandling": [
+    "Set compliance status to Processing Failed",
+    "Notify compliance administrator"
+  ]
+}
