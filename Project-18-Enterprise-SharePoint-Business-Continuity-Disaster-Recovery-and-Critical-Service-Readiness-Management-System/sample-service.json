@@ -1,0 +1,12 @@
+{
+  "serviceId": "BCP-2026-0018",
+  "serviceName": "Enterprise Finance Reporting",
+  "serviceOwner": "finance.system.owner@contoso.com",
+  "criticality": "Critical",
+  "recoveryTimeObjective": 4,
+  "recoveryPointObjective": 1,
+  "recoverySite": "Secondary Riyadh Data Center",
+  "lastTestDate": "2026-03-15",
+  "nextTestDate": "2026-09-15",
+  "readinessStatus": "Review Due"
+}
