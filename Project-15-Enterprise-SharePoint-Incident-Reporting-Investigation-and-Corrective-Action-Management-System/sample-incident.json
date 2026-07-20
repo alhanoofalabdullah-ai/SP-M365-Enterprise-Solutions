@@ -1,0 +1,11 @@
+{
+  "incidentNumber": "INC-2026-0015",
+  "reportedBy": "employee@contoso.com",
+  "incidentCategory": "Health and Safety",
+  "severity": "High",
+  "incidentDate": "2026-09-10T09:30:00Z",
+  "location": "Riyadh Headquarters",
+  "investigator": "safety.manager@contoso.com",
+  "rootCause": "Investigation pending",
+  "incidentStatus": "Reported"
+}
