@@ -1,0 +1,11 @@
+{
+  "changeNumber": "CHG-2026-0013",
+  "requestedBy": "service.owner@contoso.com",
+  "changeOwner": "change.manager@contoso.com",
+  "changeType": "Normal",
+  "riskLevel": "High",
+  "businessImpact": "Temporary interruption to the finance reporting service.",
+  "implementationDate": "2026-10-15T22:00:00Z",
+  "rollbackPlan": "Restore the previous application version and database snapshot.",
+  "changeStatus": "Impact Assessment"
+}
