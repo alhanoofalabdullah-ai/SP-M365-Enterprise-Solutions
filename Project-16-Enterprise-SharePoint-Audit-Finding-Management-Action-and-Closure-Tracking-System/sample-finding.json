@@ -1,0 +1,9 @@
+{
+  "findingNumber": "AUD-2026-0016",
+  "auditArea": "Information Security",
+  "findingOwner": "security.manager@contoso.com",
+  "riskRating": "High",
+  "findingDetails": "Access reviews were not completed within the required period.",
+  "targetClosureDate": "2026-11-30",
+  "findingStatus": "Open"
+}
