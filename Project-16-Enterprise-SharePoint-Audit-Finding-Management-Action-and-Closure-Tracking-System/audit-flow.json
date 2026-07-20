@@ -1,0 +1,28 @@
+{
+  "flowName": "Enterprise Audit Finding Closure Workflow",
+  "trigger": {
+    "connector": "SharePoint",
+    "action": "When an item is created",
+    "list": "Enterprise Audit Findings"
+  },
+  "actions": [
+    "Generate finding number",
+    "Set status to Open",
+    "Assign finding owner",
+    "Create management action record",
+    "Send due-date reminder",
+    "Escalate overdue high-risk findings",
+    "Request closure evidence",
+    "Close finding after audit validation"
+  ],
+  "riskRatings": [
+    "Low",
+    "Medium",
+    "High",
+    "Critical"
+  ],
+  "failureHandling": [
+    "Set status to Processing Failed",
+    "Notify internal audit administrator"
+  ]
+}
