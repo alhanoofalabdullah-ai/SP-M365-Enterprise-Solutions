@@ -1,0 +1,28 @@
+{
+  "flowName": "Enterprise Access Review and Permission Recertification Workflow",
+  "trigger": {
+    "type": "Recurrence",
+    "frequency": "Month",
+    "interval": 3
+  },
+  "actions": [
+    "Read access review records due for certification",
+    "Send review request to access owner",
+    "Allow retain, modify or remove decision",
+    "Update review decision and status",
+    "Notify administrator of access removal",
+    "Create exception record when access is retained temporarily",
+    "Monitor security exception expiry",
+    "Escalate overdue reviews and expired exceptions"
+  ],
+  "decisions": [
+    "Retain Access",
+    "Modify Access",
+    "Remove Access",
+    "Temporary Exception"
+  ],
+  "failureHandling": [
+    "Set review status to Processing Failed",
+    "Notify security administrator"
+  ]
+}
