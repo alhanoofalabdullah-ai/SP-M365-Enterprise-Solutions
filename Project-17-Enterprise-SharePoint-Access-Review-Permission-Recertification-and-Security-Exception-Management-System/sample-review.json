@@ -1,0 +1,11 @@
+{
+  "reviewNumber": "AR-2026-0017",
+  "resourceName": "Finance Reporting Site",
+  "resourceType": "SharePoint Site",
+  "accessOwner": "finance.manager@contoso.com",
+  "assignedUser": "analyst@contoso.com",
+  "permissionLevel": "Edit",
+  "reviewDueDate": "2026-10-01",
+  "reviewDecision": "Retain Access",
+  "reviewStatus": "Completed"
+}
