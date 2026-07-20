@@ -1,0 +1,11 @@
+{
+  "kpiId": "KPI-2026-0020",
+  "strategicObjective": "Improve Digital Service Availability",
+  "kpiOwner": "digital.director@contoso.com",
+  "department": "Digital Transformation",
+  "targetValue": 99.9,
+  "actualValue": 98.2,
+  "performanceStatus": "Amber",
+  "reportingPeriod": "Q3 2026",
+  "nextReviewDate": "2026-10-01"
+}
