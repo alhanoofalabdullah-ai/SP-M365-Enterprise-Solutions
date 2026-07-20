@@ -1,0 +1,27 @@
+{
+  "flowName": "Enterprise Executive KPI Monitoring Workflow",
+  "trigger": {
+    "type": "Recurrence",
+    "frequency": "Month",
+    "interval": 1
+  },
+  "actions": [
+    "Read enterprise KPI records",
+    "Calculate target achievement percentage",
+    "Set Green, Amber or Red performance status",
+    "Notify KPI owner of underperformance",
+    "Escalate red KPIs to executive sponsor",
+    "Create executive performance review record",
+    "Request corrective action",
+    "Update next review date"
+  ],
+  "statusRules": {
+    "Green": "Achievement is 90 percent or higher",
+    "Amber": "Achievement is between 70 and 89 percent",
+    "Red": "Achievement is below 70 percent"
+  },
+  "failureHandling": [
+    "Set status to Processing Failed",
+    "Notify performance management administrator"
+  ]
+}
