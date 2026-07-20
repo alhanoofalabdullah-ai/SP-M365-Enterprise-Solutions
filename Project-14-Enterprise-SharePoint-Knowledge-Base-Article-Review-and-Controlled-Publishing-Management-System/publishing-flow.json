@@ -1,0 +1,31 @@
+{
+  "flowName": "Enterprise Knowledge Article Review and Publishing Workflow",
+  "trigger": {
+    "connector": "SharePoint",
+    "action": "When a file is created or modified",
+    "library": "Enterprise Knowledge Base"
+  },
+  "actions": [
+    "Set article status to Draft",
+    "Validate owner, reviewer and review date",
+    "Submit article for reviewer approval",
+    "Publish approved article",
+    "Return rejected article to Draft",
+    "Create article review log",
+    "Notify article owner",
+    "Monitor expired articles",
+    "Archive outdated knowledge"
+  ],
+  "statuses": [
+    "Draft",
+    "Pending Review",
+    "Published",
+    "Rejected",
+    "Expired",
+    "Archived"
+  ],
+  "failureHandling": [
+    "Set status to Processing Failed",
+    "Notify knowledge administrator"
+  ]
+}
