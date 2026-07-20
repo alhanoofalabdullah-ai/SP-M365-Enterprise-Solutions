@@ -225,9 +225,3 @@ Enterprise SharePoint • Microsoft 365 • Governance • PMO • Automation
 https://github.com/alhanoofalabdullah-ai
 
 ---
-
-# ⭐ Support
-
-If you find this repository useful, consider giving it a **Star ⭐**.
-
-Your support is greatly appreciated.
