@@ -1,0 +1,27 @@
+{
+  "flowName": "Enterprise Procurement Approval Workflow",
+  "trigger": {
+    "connector": "SharePoint",
+    "action": "When an item is created",
+    "list": "Procurement Requests"
+  },
+  "actions": [
+    "Generate procurement request number",
+    "Set approval status to Pending",
+    "Select approval level from estimated value",
+    "Send approval request to department manager",
+    "Escalate high-value requests to procurement director",
+    "Update approved or rejected status",
+    "Notify requester and procurement team",
+    "Store purchase order number after approval"
+  ],
+  "approvalLevels": {
+    "UpTo10000": "Department Manager",
+    "10001To100000": "Procurement Manager",
+    "Above100000": "Procurement Director"
+  },
+  "failureHandling": [
+    "Set approval status to Processing Failed",
+    "Notify procurement administrator"
+  ]
+}
