@@ -1,0 +1,11 @@
+{
+  "obligationId": "REG-2026-0019",
+  "regulator": "National Regulatory Authority",
+  "requirementTitle": "Quarterly Privileged Access Review",
+  "controlOwner": "security.manager@contoso.com",
+  "controlFrequency": "Quarterly",
+  "nextReviewDate": "2026-10-01",
+  "complianceStatus": "Review Due",
+  "riskRating": "High",
+  "remediationPlan": "Complete access review and upload evidence."
+}
