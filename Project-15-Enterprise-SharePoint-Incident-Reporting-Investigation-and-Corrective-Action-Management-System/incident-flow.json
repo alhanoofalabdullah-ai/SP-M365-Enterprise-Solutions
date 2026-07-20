@@ -1,0 +1,28 @@
+{
+  "flowName": "Enterprise Incident Investigation Workflow",
+  "trigger": {
+    "connector": "SharePoint",
+    "action": "When an item is created",
+    "list": "Enterprise Incidents"
+  },
+  "actions": [
+    "Generate incident number",
+    "Set status to Reported",
+    "Assign investigator from category",
+    "Notify safety and department managers",
+    "Escalate critical incidents immediately",
+    "Create corrective action record",
+    "Monitor action target date",
+    "Close incident after action verification"
+  ],
+  "severityLevels": [
+    "Low",
+    "Medium",
+    "High",
+    "Critical"
+  ],
+  "failureHandling": [
+    "Set incident status to Processing Failed",
+    "Notify incident management administrator"
+  ]
+}
