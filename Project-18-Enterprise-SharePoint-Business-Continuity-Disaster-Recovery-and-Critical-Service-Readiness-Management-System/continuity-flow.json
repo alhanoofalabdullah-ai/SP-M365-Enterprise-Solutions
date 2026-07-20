@@ -1,0 +1,29 @@
+{
+  "flowName": "Enterprise Business Continuity Readiness Workflow",
+  "trigger": {
+    "type": "Recurrence",
+    "frequency": "Week",
+    "interval": 1
+  },
+  "actions": [
+    "Read critical business services",
+    "Identify continuity exercises due",
+    "Notify service owner and continuity manager",
+    "Create continuity exercise record",
+    "Evaluate exercise result",
+    "Set readiness status",
+    "Escalate failed critical-service tests",
+    "Schedule corrective-action follow-up"
+  ],
+  "readinessStatuses": [
+    "Ready",
+    "Review Due",
+    "Testing Scheduled",
+    "Action Required",
+    "Not Ready"
+  ],
+  "failureHandling": [
+    "Set readiness status to Processing Failed",
+    "Notify business continuity administrator"
+  ]
+}
