@@ -1,0 +1,33 @@
+{
+  "flowName": "Enterprise Change Request and CAB Approval Workflow",
+  "trigger": {
+    "connector": "SharePoint",
+    "action": "When an item is created",
+    "list": "Enterprise Change Requests"
+  },
+  "actions": [
+    "Generate change number",
+    "Set status to Impact Assessment",
+    "Evaluate change type and risk level",
+    "Route standard changes to change manager",
+    "Route high-risk changes to CAB approval",
+    "Update approved or rejected status",
+    "Create CAB decision record",
+    "Notify requester and implementation team"
+  ],
+  "changeTypes": [
+    "Standard",
+    "Normal",
+    "Emergency"
+  ],
+  "riskLevels": [
+    "Low",
+    "Medium",
+    "High",
+    "Critical"
+  ],
+  "failureHandling": [
+    "Set status to Processing Failed",
+    "Notify change management administrator"
+  ]
+}
