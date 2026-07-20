@@ -87,27 +87,27 @@ Project-19-Enterprise-SharePoint-Regulatory-Obligation-Compliance-Evidence-and-C
 
 ## Regulatory Obligations
 
-| Column	                | Purpose
+| Column	                   | Purpose
 | Obligation ID	          | Unique compliance identifier
-| Regulator	              | Issuing authority
-| Requirement Title      	| Regulatory requirement
+| Regulator	          | Issuing authority
+| Requirement Title      	 | Regulatory requirement
 | Control Owner	          | Accountable employee
-| Control Frequency	      | Monthly, Quarterly, Annual or Event-Based
-| Next Review Date	      | Required control-review date
-| Compliance Status	      | Current compliance condition
-| Risk Rating	            | Low, Medium, High or Critical
-| Remediation Plan	      | Required corrective action
+| Control Frequency	 | Monthly, Quarterly, Annual or Event-Based
+| Next Review Date	 | Required control-review date
+| Compliance Status	 | Current compliance condition
+| Risk Rating	          | Low, Medium, High or Critical
+| Remediation Plan	 | Required corrective action
 
 ---
 
 ## Compliance Evidence
 
 | Column	             | Purpose
-| Obligation ID	       | Related regulatory obligation
-| Evidence Owner	     | Accountable evidence provider
-| Evidence Period	     | Reporting or control period
-| Evidence Status	     | Draft, Submitted, Accepted or Rejected
-| Review Date	         | Evidence-review timestamp
+| Obligation ID	    | Related regulatory obligation
+| Evidence Owner	    | Accountable evidence provider
+| Evidence Period	    | Reporting or control period
+| Evidence Status	    | Draft, Submitted, Accepted or Rejected
+| Review Date         | Evidence-review timestamp
 
 ---
 
